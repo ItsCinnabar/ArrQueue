@@ -49,7 +49,7 @@ for episode in queue:
                     break
         if bad:
             if episode['title'] not in errors:
-                result = requests.post(r''+sonarrDiscordWebhook, data="{\"username\": \"Sonarr\", \"content\": \"<@"+radarrDiscordUserID+"> stuck TV found in sonarr\"}", headers={"Content-Type": "application/json"})
+                result = requests.post(r''+sonarrDiscordWebhook, data="{\"username\": \"Sonarr\", \"content\": \"<@"+sonarrDiscordUserID+"> stuck TV found in sonarr\"}", headers={"Content-Type": "application/json"})
                 errors.append(episode['title'])
             break
     except KeyError:
