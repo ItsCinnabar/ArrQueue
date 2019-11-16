@@ -15,7 +15,7 @@ for movie in queue:
     #print(movie['title']+": "+movie['trackedDownloadStatus'])
     try:
         if movie['trackedDownloadStatus'] == 'Warning':
-            for status in movie['statusMessages'][0]:
+            for status in movie['statusMessages']:
                 if 'XEM' not in status['messages'][0]:
                     bad = True
                     break
