@@ -2,7 +2,7 @@ import requests
 import json
 
 #Radarr
-radarrAPI = 'https://radarr.com/api/queue?apikey=yourKeyHere'
+radarrAPI = 'https://yourRadarrAddressHere/api/queue?apikey=yourKeyHere' #change https to http if you are not using SSL
 radarrUsername = 'yourUsernameHere'
 radarrPassword = 'yourPasswordHere'
 radarrDiscordWebhook = 'yourWebhookURLHere'
@@ -28,7 +28,7 @@ for movie in queue:
         pass
 
 #Sonarr
-sonarrAPI = 'https://sonarr.com/api/queue?apikey=yourKeyHere'
+sonarrAPI = 'https://yourSonarrAddressHere/api/queue?apikey=yourKeyHere' #change https to http if you are not using SSL
 sonarrUsername = 'yourUsernameHere'
 sonarrPassword = 'yourPasswordHere'
 sonarrDiscordWebhook = 'yourWebhookURLHere'
