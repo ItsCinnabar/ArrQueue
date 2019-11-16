@@ -16,7 +16,7 @@ for movie in queue:
     try:
         if movie['trackedDownloadStatus'] == 'Warning':
             for status in movie['statusMessages'][0]:
-                if 'XEM' not in status['messages']:
+                if 'XEM' not in status['messages'][0]:
                     bad = True
                     break
 
@@ -46,7 +46,6 @@ for episode in queue:
             for status in episode['statusMessages']:
                 if 'XEM' not in status['messages'][0] and 'TBA' not in status['messages'][0]:
                     bad = True
-                    print(status['messages'])
                     break
         if bad:
             if episode['title'] not in errors:
